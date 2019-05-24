@@ -10,7 +10,13 @@ import Foundation
 
 
 class AppModel {
-    static let sharedInstance
+    static let sharedInstance = AppModel()
     
-    var 
+    var people = [Person]()
+    
+    var personCount : Int {
+        return people.count
+    }
+    
+    
 }
