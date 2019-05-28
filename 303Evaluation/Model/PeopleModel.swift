@@ -1,5 +1,5 @@
 //
-//  AppModel.swift
+//  PersonModel.swift
 //  303Evaluation
 //
 //  Created by Thomas Condon on 5/23/19.
@@ -9,9 +9,10 @@
 import Foundation
 
 
-class AppModel {
+class PeopleModel {
     static let sharedInstance = AppModel()
-    
+
+    let jsonRestService = JSONRestService()
     var people = [Person]()
     
     var personCount : Int {
