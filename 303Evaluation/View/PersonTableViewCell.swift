@@ -10,8 +10,12 @@ import UIKit
 
 class PersonTableViewCell: UITableViewCell {
     
-    static let cellId = "PersonTableViewCell"
+    static let cellId = "PersonTableCellViewId"
 
+    @IBOutlet weak var firstName: UILabel!
+    @IBOutlet weak var lastName: UILabel!
+    @IBOutlet weak var city: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,5 +25,4 @@ class PersonTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
-
 }

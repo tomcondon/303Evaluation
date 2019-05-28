@@ -7,3 +7,28 @@
 //
 
 import Foundation
+
+
+// MARK: - PersonElement
+public struct PersonElement: Codable {
+    let fname, lname, city: String?
+}
+
+public typealias People = [PersonElement]
+
+
+public class PeopleRestService : JSONRestService {
+
+    public override init() {
+        super.init()
+    }
+
+    public func fetchPeople(urlString: String, completion: @escaping (People) -> ()) {
+        if let url = URL(string: urlString) {
+            self.get(url: url, successCompletion: completion, errorCompletion: {
+                error in
+                print("Error = \(String(describing: error?.localizedDescription))")
+            })
+        }
+    }
+}

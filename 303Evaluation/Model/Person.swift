@@ -7,3 +7,16 @@
 //
 
 import Foundation
+
+
+public class PersonInfo {
+    var firstName: String
+    var lastName: String
+    var city: String
+
+    init(firstName: String?, lastName: String?, city: String?) {
+        self.firstName = firstName ?? ""
+        self.lastName = lastName ?? ""
+        self.city = city ?? ""
+    }
+}
